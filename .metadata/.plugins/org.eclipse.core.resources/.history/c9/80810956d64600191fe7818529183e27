@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.oracle.testng.tests;
+
+import org.testng.annotations.Test;
+
+/**
+ * @author smarthi
+ *
+ */
+public class TestNGTest1 {
+
+}

@@ -1,0 +1,50 @@
+package com.oracle.practice.programming.threads;
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class ProducerConsumerBlockingQueue {
+	private static BlockingQueue<Integer> bq = new LinkedBlockingQueue<Integer>(2);
+
+	public static void main(String args[]) {
+		
+	}
+
+	public void startBusiness() {
+		Thread producerT = new Thread(ProducerConsumerBlockingQueue::produce);
+		Thread consumerT = new Thread(ProducerConsumerBlockingQueue::consume);
+
+		producerT.start();
+		consumerT.start();
+		try {
+			producerT.join();
+			consumerT.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public static void produce() {
+		int value = 0;
+		while (true) {
+			try {
+				bq.put(value++);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public static int consume() {
+		while (true) {
+			try {
+				System.out.println(bq.take());
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}

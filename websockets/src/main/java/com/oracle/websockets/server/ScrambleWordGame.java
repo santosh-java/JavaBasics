@@ -1,0 +1,71 @@
+/**
+ * 
+ */
+package com.oracle.websockets.server;
+
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.websocket.CloseReason;
+import javax.websocket.CloseReason.CloseCodes;
+import javax.websocket.OnClose;
+import javax.websocket.OnError;
+import javax.websocket.OnMessage;
+import javax.websocket.OnOpen;
+import javax.websocket.Session;
+import javax.websocket.server.ServerEndpoint;
+
+import com.oracle.websockets.client.ScrambleWordHelper;
+
+/**
+ * @author smarthi
+ *
+ */
+@ServerEndpoint(value = "/scrambleWord")
+public class ScrambleWordGame {
+	private Logger logger = Logger.getLogger(this.getClass().getName());
+
+	private ScrambleWordHelper wordHelper = new ScrambleWordHelper();
+
+	public ScrambleWordGame() {
+		wordHelper.initMap();
+	}
+
+	@OnOpen
+	public void onOpen(Session session) {
+		logger.info("WebSocket connection established..." + session.getId());
+	}
+
+	@OnMessage
+	public void onMessage(String message, Session session) {
+		switch (message) {
+		case "quit":
+			logger.info("Request to stop the WebSocket has been received from client... Closing the connection...");
+			try {
+				session.close(new CloseReason(CloseCodes.NORMAL_CLOSURE, "Client initiated WebSocket closure..."));
+			} catch (IOException e) {
+				logger.log(Level.SEVERE, "Exception occurred while closing the websocket connection to client..."
+						+ e.getLocalizedMessage());
+			}
+			break;
+		case "start":
+			wordHelper.sendText(session, "Lets start playing scramble word... Can you guess the word??? \n"
+					+ wordHelper.getScrambleWord(session));
+			break;
+		default:
+			logger.info("Client has answered the question... Checking for correctness...");
+			wordHelper.checkIfAnsweredCorrectly(session, message);
+		}
+	}
+
+	@OnClose
+	public void onClose(Session session, CloseReason closeReason) {
+		logger.info(String.format("Session %s closed because of %s", session.getId(), closeReason));
+	}
+
+	@OnError
+	public void onError(Session session, Throwable throwable) {
+
+	}
+}

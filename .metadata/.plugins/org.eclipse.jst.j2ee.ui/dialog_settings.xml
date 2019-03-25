@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="true" key="J2EE_EXPORT_OVERWRITE"/>
+	<item value="true" key="J2EE_EXPORT_SOURCE"/>
+	<list key="MRU_RUNTIME_STORE">
+		<item value="NULL_RUNTIME"/>
+	</list>
+	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="/home/smarthi/work/software/tomcat/apache-tomcat-9.0.14/webapps/WebsockerServer.war"/>
+		<item value="/home/smarthi/work/source/pocs/WebsockerServer/WebsockerServer.war"/>
+	</list>
+</section>

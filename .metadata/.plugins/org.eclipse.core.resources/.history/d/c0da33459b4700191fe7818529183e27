@@ -1,0 +1,40 @@
+package com.oracle.practice.programming.threads;
+
+public class ProducerConsumerClassic {
+	
+	
+
+	public static void main(String[] args) {
+		ProducerConsumerClassic pcc = new ProducerConsumerClassic();
+		private Buffer b = new Buffer();
+		try {
+			pcc.startBusiness();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void startBusiness() throws InterruptedException {
+		Thread producerThread = new Thread(ProducerConsumerClassic::produce);
+		Thread consumerThread = new Thread(ProducerConsumerClassic::consume);
+		producerThread.start();
+		consumerThread.start();
+		producerThread.join();
+		consumerThread.join();
+	}
+
+	public void produce(Buffer b) {
+		int value = 1;
+		while (true) {
+			b.add(value++);
+		}
+	}
+
+	public void consume(Buffer b) {
+		while (true) {
+			System.out.println("Insize calling consume : " + b.remove());
+		}
+	}
+
+}

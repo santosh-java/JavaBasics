@@ -1,0 +1,4 @@
+GitRepositoriesView.GitDirectories=/home/smarthi/work/source/apaas-service/.git\:/home/smarthi/work/source/pocs/spring-boot-microservices-workshop/.git\:
+GitRepositoriesView.GitDirectories.relative=/home/smarthi/work/source/apaas-service/.git\:spring-boot-microservices-workshop/.git\:
+core_autoIgnoreDerivedResources=false
+eclipse.preferences.version=1

@@ -1,0 +1,21 @@
+package com.oracle.practice.programming.sort;
+
+public class ShellSort {
+	public static void main(String[] args) {
+
+	}
+
+	public int[] insertionSort(int[] arr, int startIndex, int increment) {
+		for (int i = startIndex; i < arr.length - 1; i += increment) {
+			for (int j = i + increment; j > 0; j -= increment) {
+				if(arr[j] < arr[j-increment]){
+					//Swap the elements
+					arr[j] = arr[j]+arr[j-increment];
+					arr[j-increment] = arr[j] - arr[j-increment];
+					arr[j] = arr[j]- arr[j-increment];
+				}
+			}
+		}
+		return arr;
+	}
+}

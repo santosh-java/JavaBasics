@@ -1,0 +1,29 @@
+package com.oracle.practice.programming.threads;
+
+public class ProducerConsumerClassic {
+	private Buffer b = new Buffer();
+
+	public static void main(String[] args) {
+		ProducerConsumerClassic pcc = new ProducerConsumerClassic();
+
+	}
+
+	public void startBusiness() {
+		Thread producerThread = new Thread(()->System.out.println("producerstart"));
+		
+	}
+	
+	public void produce() {
+		int value = 1;
+		while(true) {
+			b.add(value++);
+		}
+	}
+	
+	public void consume() {
+		while(true) {
+			System.out.println("Insize calling consume : " + b.remove());
+		}
+	}
+
+}

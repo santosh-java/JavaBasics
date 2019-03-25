@@ -1,0 +1,33 @@
+package com.oracle.practice.algos;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Anagram {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public List<String> findAnagrams(String word){
+		List<String> result = new ArrayList<String>();
+		if(word.length()==0) {
+			result.add(word);
+			return result;
+		}
+		
+		
+		return result;
+	}
+
+	public List<String> insertCharAtEveryPositionOfAWord(List<String> prevAnagrams, char c) {
+		List<String> currAnagrams = new ArrayList<String>();
+		char[] cArr;
+		for(String anagram: prevAnagrams) {
+			cArr = anagram.toCharArray();
+			char[] fArr = new char[cArr.length+1];
+			for(int i=0; i<cArr.length; i++)
+		}
+	}
+}

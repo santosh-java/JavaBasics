@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package com.oracle.testng.tests;
+
+import org.testng.annotations.Test;
+
+/**
+ * @author smarthi
+ *
+ */
+public class TestNGTest1 {
+	@Test
+	public void testCase1() {
+		System.out.println("Testcase 1");
+	}
+}

@@ -1,0 +1,7 @@
+<suite name="MyTestNGSuite">
+	<test name="FirstTestNGTest">
+		<classes>
+			<class name="com.oracle.testng.tests.TestNGTest1"></class>
+		</classes>
+	</test>
+</suite>

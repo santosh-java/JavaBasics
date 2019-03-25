@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+/home/smarthi/work/source/pocs/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1469259970.index
+/websocket/src/main/resources

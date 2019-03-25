@@ -1,0 +1,23 @@
+package com.oracle.practice.programming.sort;
+
+public class SelectionSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public int[] selectionSort(int[] unsortedInts) {
+		for (int i = 0; i < unsortedInts.length; i++) {
+			for (int j = i+1; j<unsortedInts.length; j++ ) {
+				if(unsortedInts[i] < unsortedInts[j]) {
+					//Swap elements in i and j positions in the array
+					unsortedInts[i] = unsortedInts[i]+unsortedInts[j];
+					unsortedInts[j] = unsortedInts[i]-unsortedInts[j];
+					unsortedInts[i] = unsortedInts[i]-unsortedInts[j];
+				}
+			}
+		}
+		return unsortedInts;
+	}
+}

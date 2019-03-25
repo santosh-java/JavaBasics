@@ -1,0 +1,7 @@
+1548754034094	Extract method 'sendText'
+1548754628116	Move compilation unit
+1548754643073	Rename package 'com.oracle.websockets'
+1548754648728	Delete element
+1548754655613	Delete element
+1548755653346	Rename type 'WebSocketServer'
+1548755671073	Rename type 'WebSocketClient'

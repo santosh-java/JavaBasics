@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="javax.websocket.Session"/>
+<fullyQualifiedTypeName name="com.oracle.practice.lambdas.HelloWorldGreeting"/>
+<fullyQualifiedTypeName name="com.oracle.practice.lambdas.StringLengthLambda"/>
+<fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="com.oracle.practice.lambdas.NameComparator"/>
+<fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+<fullyQualifiedTypeName name="java.util.function.BiConsumer"/>
+<fullyQualifiedTypeName name="com.oracle.practice.lambdas.unit2.ThisReferenceExample"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="com.oracle.practice.lambdas.unit3.MethodReferenceExample"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.function.Predicate"/>
+<fullyQualifiedTypeName name="java.util.function.Consumer"/>
+<fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.SpringBootApplication"/>
+<fullyQualifiedTypeName name="org.springframework.boot.SpringApplication"/>
+<fullyQualifiedTypeName name="com.oracle.springbootstarter.CourseAPIApp"/>
+</qualifiedTypeNameHistroy>

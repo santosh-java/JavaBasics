@@ -1,0 +1,16 @@
+package com.oracle.practice.programming.sort;
+
+public class ShellSort {
+	public static void main(String[] args) {
+
+	}
+
+	public int[] insertionSort(int[] arr, int startIndex, int increment) {
+		for (int i = startIndex; i < arr.length - 1; i += increment) {
+			for (int j = i + increment; j > 0; j -= increment) {
+
+			}
+		}
+		return arr;
+	}
+}
