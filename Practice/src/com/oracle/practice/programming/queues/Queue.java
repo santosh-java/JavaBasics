@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 
 public class Queue<T> {
 	private T[] circularArr;
-	private static final int MAX_QUEUE_SIZE = 4;
+	private static final int MAX_QUEUE_SIZE = 40;
 	private static final int QUEUE_EMPTY_INDICATOR = -1;
 	private int headIndex;
 	private int tailIndex;
