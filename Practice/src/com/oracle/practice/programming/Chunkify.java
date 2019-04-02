@@ -7,13 +7,16 @@ public class Chunkify {
 
 	public static void main(String[] args) {
 		Chunkify c = new Chunkify();
+		
+		System.out.println("Testcase 1 : ab:a:abc:asdfasdf:asdfasd:a:aa:");
 		List<String> chunkify = c.chunkify("ab:a:abc:asdfasdf:asdfasd:a:aa:", 5);
 		chunkify.stream().forEach(System.out::println);
 		
+		System.out.println("Testcase 2 : abaadfaasdf:a:abc:asdfasdf:asdfasd:a:aa:");
 		List<String> chunkify1 = c.chunkify("abaadfaasdf:a:abc:asdfasdf:asdfasd:a:aa:", 5);
 		chunkify1.stream().forEach(System.out::println);
 		
-		System.out.println("Testcase 3");
+		System.out.println("Testcase 3 : ab:a:abc:asdfasdf:asdfasd:a:aa:");
 		List<String> chunkify2 = c.chunkify("a:bb:cc:abcdef:ab:c:d:", 5);
 		chunkify2.stream().forEach(System.out::println);
 	}

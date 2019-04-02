@@ -6,8 +6,8 @@ public class RunLengthEncodeDecode {
 
 	public static void main(String[] args) {
 		RunLengthEncodeDecode rled = new RunLengthEncodeDecode();
-		System.out.println(rled.runLengthEncode("AAAAABBCCCCDDD"));
-		System.out.println(rled.runLengthDecode(rled.runLengthEncode("AAAAABBCCCCDDD")));
+		System.out.println(rled.runLengthEncodeNonMap("AAAAABBCCCCDDDAACBBBDDD"));
+		System.out.println(rled.runLengthDecode(rled.runLengthEncodeNonMap("AAAAABBCCCCDDDAACBBBDDD")));
 
 	}
 
@@ -24,6 +24,26 @@ public class RunLengthEncodeDecode {
 		StringBuilder encodedStr = new StringBuilder();
 		encodedString.forEach((character, repetetions) -> encodedStr.append(repetetions + character));
 		return encodedStr.toString();
+	}
+	
+	public String runLengthEncodeNonMap(String source) {
+		StringBuilder result = new StringBuilder();
+		for (int i = 0; i < source.length(); i++) {
+			char c = source.charAt(i);
+			int count = 1;
+			for(int j= i+1; j< source.length(); j++) {
+				
+				if(source.charAt(j) == c) {
+					count++;
+					i++;
+				}else
+					break;
+			}
+			result.append(count);
+			result.append(c);
+			
+		}
+		return result.toString();
 	}
 
 	public String runLengthDecode(String encodedStr) {

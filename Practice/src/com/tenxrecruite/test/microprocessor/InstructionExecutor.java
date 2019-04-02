@@ -132,7 +132,11 @@ class OrInstruction implements Instruction {
 			return word;
 		}
 
-		word[firstPos] = (char) (word[firstPos] | word[secondPos]);
+		if (word[firstPos] == '0' && word[secondPos] == '0')
+			word[firstPos] = '0';
+		else
+			word[firstPos] = '1';
+		
 		return word;
 	}
 
@@ -176,8 +180,12 @@ class AndInstruction implements Instruction {
 			word[firstPos] = '?';
 			return word;
 		}
-
-		word[firstPos] = (char) (word[firstPos] & word[secondPos]);
+		
+		if (word[firstPos] == '1' && word[secondPos] == '1')
+			word[firstPos] = '1';
+		else
+			word[firstPos] = '0';
+		
 		return word;
 	}
 
@@ -277,12 +285,12 @@ public class InstructionExecutor extends Microprocessor {
 					if (instructionCount == 0) {
 						break;
 					}
-					char[] word = createInitialWord();
+					char[] word = createInitialWord(32);
 					processInstructions(s, instructionCount, word, insExecutor);
 					for (int i = word.length - 1; i >= 0; i--) {
-						if(i == 0) {
+						if (i == 0) {
 							System.out.println(word[i]);
-						}else {
+						} else {
 							System.out.print(word[i]);
 						}
 					}
@@ -329,8 +337,8 @@ public class InstructionExecutor extends Microprocessor {
 		}
 	}
 
-	private static char[] createInitialWord() {
-		char[] word = (char[]) Array.newInstance(char.class, 32);
+	private static char[] createInitialWord(int size) {
+		char[] word = (char[]) Array.newInstance(char.class, size);
 		for (int i = 0; i < word.length; i++) {
 			word[i] = '?';
 		}
