@@ -66,12 +66,14 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="Practice"/>
 			<item value="WebsocketServer"/>
 			<item value="WebsockerServer"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Practice"/>
 			<item value="WebsocketServer"/>
 			<item value="WebsockerServer"/>
 		</list>

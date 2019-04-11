@@ -4,7 +4,7 @@
 		<item key="DIALOG_WIDTH" value="563"/>
 		<item key="TOGGLE_SELECTED" value="false"/>
 		<item key="DIALOG_HEIGHT" value="412"/>
-		<item key="DIALOG_X_ORIGIN" value="2504"/>
+		<item key="DIALOG_X_ORIGIN" value="1357"/>
 		<item key="DIALOG_Y_ORIGIN" value="307"/>
 	</section>
 	<section name="NewWizardAction">
@@ -15,5 +15,7 @@
 			<item value="org.eclipse.m2e"/>
 			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
 		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
 	</section>
 </section>

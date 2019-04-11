@@ -1,6 +1,7 @@
 package com.oracle.practice.programming;
 
 import java.util.LinkedHashMap;
+import java.util.PriorityQueue;
 
 public class RunLengthEncodeDecode {
 
@@ -8,7 +9,6 @@ public class RunLengthEncodeDecode {
 		RunLengthEncodeDecode rled = new RunLengthEncodeDecode();
 		System.out.println(rled.runLengthEncodeNonMap("AAAAABBCCCCDDDAACBBBDDD"));
 		System.out.println(rled.runLengthDecode(rled.runLengthEncodeNonMap("AAAAABBCCCCDDDAACBBBDDD")));
-
 	}
 
 	public String runLengthEncode(String source) {

@@ -26,12 +26,24 @@ public class ProducerConsumerClassic {
 	public static void produce() {
 		int value = 1;
 		while (true) {
+			try {
+				Thread.sleep(1000L);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			b.add(value++);
 		}
 	}
 
 	public static void consume() {
 		while (true) {
+			try {
+				Thread.sleep(1000L);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println("Insize calling consume : " + b.remove());
 		}
 	}

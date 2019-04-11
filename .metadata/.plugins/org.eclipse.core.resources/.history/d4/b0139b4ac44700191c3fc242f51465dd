@@ -1,5 +1,0 @@
-package com.oracle.practice.programming.threads;
-
-public class ProducerConsumerBlockingQueue {
-
-}
