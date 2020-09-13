@@ -87,8 +87,6 @@ public class Oracle_LinkNodesInSameLevelBT {
 			for (int i = 0; i < list.size(); i++) {
 				if (i == 0)
 					list.get(i).nextRight = null;
-				else if (i == 1)
-					list.get(i).nextRight = list.get(0);
 				else
 					list.get(i).nextRight = list.get(i - 1);
 			}
